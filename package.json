@@ -12,6 +12,7 @@
 		"build": "npm run build:esm && npm run build:cjs",
 		"build:esm": "tsc",
 		"build:cjs": "tsc --module commonjs --outDir lib/cjs",
+		"prepublishOnly": "npm run build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Isaiah Gamble (itg.2048@gmail.com)",
