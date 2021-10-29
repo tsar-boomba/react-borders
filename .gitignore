@@ -21,7 +21,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/my-app/node_modules
-/my-app/build
+/example/node_modules
+/example/out
+/example/.next
 /node_modules
 /lib
