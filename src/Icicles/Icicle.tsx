@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './icicles.css';
 
 interface IcicleProps {
 	values: { height: number; width: number };

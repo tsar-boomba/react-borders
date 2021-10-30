@@ -24,6 +24,7 @@ const Home: NextPage = () => {
 					height: '20%',
 					margin: '20%',
 					padding: 40,
+					backgroundColor: 'red',
 				}}
 			>
 				Icicles
