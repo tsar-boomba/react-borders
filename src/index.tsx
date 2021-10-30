@@ -1,3 +1,3 @@
 import Icicles from './Icicles/Icicles';
 
-export default Icicles;
+export { Icicles };

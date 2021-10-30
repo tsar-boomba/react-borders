@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import styles from '../styles/Home.module.css';
 import Icicles from 'icicles';
+import Box from '../components/Box';
 
 const Home: NextPage = () => {
 	const boxRef = useRef<HTMLDivElement>(null);
@@ -16,20 +17,7 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<div
-				ref={boxRef}
-				style={{
-					position: 'relative',
-					width: '20%',
-					height: '20%',
-					margin: '20%',
-					padding: 40,
-					backgroundColor: 'red',
-				}}
-			>
-				Icicles
-				<Icicles parentRef={boxRef} />
-			</div>
+			<Box backgroundColor='red' />
 		</div>
 	);
 };

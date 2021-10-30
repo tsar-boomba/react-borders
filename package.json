@@ -1,7 +1,7 @@
 {
 	"name": "icicles",
-	"version": "1.0.0",
-	"description": "",
+	"version": "1.0.1",
+	"description": "A component to attach icicles to any html element",
 	"main": "./lib/cjs/index.js",
 	"module": "./lib/esm/index.js",
 	"types": "./lib/esm/index.d.ts",
@@ -11,7 +11,7 @@
 	"scripts": {
 		"build": "rollup -c",
 		"prepublishOnly": "npm run build",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"watch": "rollup -cw"
 	},
 	"author": "Isaiah Gamble (itg.2048@gmail.com)",
 	"license": "MIT",

@@ -8,6 +8,9 @@ const packageJson = require('./package.json');
 
 export default {
 	input: 'src/index.tsx',
+	watch: {
+		include: 'src/**',
+	},
 	output: [
 		{
 			file: packageJson.main,
@@ -24,7 +27,7 @@ export default {
 		peerDepsExternal(),
 		resolve(),
 		commonjs(),
-		typescript({ useTsconfigDeclarationDir: true }),
+		typescript({ typescript: require('typescript') }),
 		postcss({
 			extensions: ['.css'],
 		}),

@@ -6,10 +6,17 @@ interface IciclesProps {
 	parentRef: React.MutableRefObject<any>;
 	heightConstrains?: { min: number; max: number };
 	widthConstrains?: { min: number; max: number };
+	backgroundColor?: string;
 	top?: number | string;
 }
 
-const Icicles: React.FC<IciclesProps> = ({ parentRef, heightConstrains, widthConstrains, top }) => {
+const Icicles: React.FC<IciclesProps> = ({
+	parentRef,
+	heightConstrains,
+	widthConstrains,
+	backgroundColor,
+	top,
+}) => {
 	const getParentWidth = () => parentRef.current?.offsetWidth;
 	const [icicles, setIcicles] = useState<{ height: number; width: number }[]>([]);
 
@@ -56,7 +63,9 @@ const Icicles: React.FC<IciclesProps> = ({ parentRef, heightConstrains, widthCon
 	return (
 		<div className='Wrapper' style={{ top: top }}>
 			{icicles.map((icicleValues, index) => {
-				return <Icicle values={icicleValues} key={index} />;
+				return (
+					<Icicle values={icicleValues} backgroundColor={backgroundColor} key={index} />
+				);
 			})}
 		</div>
 	);
