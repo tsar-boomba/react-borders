@@ -1,7 +1,10 @@
 {
 	"name": "icicles",
-	"version": "1.0.1",
-	"description": "A component to attach icicles to any html element",
+	"version": "1.0.2",
+	"description": "A React component for attaching icicles to any html element",
+	"repository": {
+		"url": "https://github.com/tsar-boomba/icicles"
+	},
 	"main": "./lib/cjs/index.js",
 	"module": "./lib/esm/index.js",
 	"types": "./lib/esm/index.d.ts",
