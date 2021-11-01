@@ -1,7 +1,7 @@
 {
-	"name": "icicles",
-	"version": "1.0.2",
-	"description": "A React component for attaching icicles to any html element",
+	"name": "react-borders",
+	"version": "0.1.0",
+	"description": "A React component for attaching shapes to teh edges any html element",
 	"repository": {
 		"url": "https://github.com/tsar-boomba/icicles"
 	},
