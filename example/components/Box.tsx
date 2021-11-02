@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Icicles } from 'icicles';
+import { Icicles } from 'react-borders';
 
 interface BoxProps {
 	style?: React.CSSProperties;
