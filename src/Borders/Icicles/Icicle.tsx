@@ -1,14 +1,9 @@
 import React from 'react';
+import { BorderItemSettings } from '../borderTypes';
 import './icicles.css';
 
-interface IcicleProps {
-	values: { height: number; width: number };
-	backgroundColor?: string;
-}
-
-const Icicle: React.FC<IcicleProps> = ({ values, backgroundColor }) => {
+const Icicle: React.FC<BorderItemSettings> = ({ values, backgroundColor }) => {
 	const isGradient = new RegExp('/\\s/C').test(backgroundColor || '');
-	console.log(isGradient.toString());
 
 	return (
 		<>

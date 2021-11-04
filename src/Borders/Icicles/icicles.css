@@ -14,7 +14,6 @@
 	position: absolute;
 	width: 100%;
 	top: 100%;
-	left: 0;
 	flex-flow: row;
 	align-items: flex-start;
 	justify-content: space-around;

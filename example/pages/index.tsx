@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRef } from 'react';
 import styles from '../styles/Home.module.css';
-import Icicles from 'icicles';
 import Box from '../components/Box';
 
 const Home: NextPage = () => {
@@ -17,7 +16,7 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Box backgroundColor='red' />
+			<Box />
 		</div>
 	);
 };

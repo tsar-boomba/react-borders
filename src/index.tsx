@@ -1,3 +1,3 @@
-import Icicles from './Icicles/Icicles';
+import Border from './Borders/Border';
 
-export { Icicles };
+export { Border };

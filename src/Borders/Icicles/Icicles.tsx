@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import { BorderSettings } from '../borderTypes';
+import { calcOffset } from '../helpers';
 import Icicle from './Icicle';
 import './icicles.css';
 
-interface IciclesProps {
-	parentRef: React.MutableRefObject<any>;
-	heightConstrains?: { min: number; max: number };
-	widthConstrains?: { min: number; max: number };
-	backgroundColor?: string;
-	top?: number | string;
-}
-
-const Icicles: React.FC<IciclesProps> = ({
+const Icicles: React.FC<BorderSettings> = ({
 	parentRef,
 	heightConstrains,
 	widthConstrains,
 	backgroundColor,
-	top,
+	side,
+	offset,
 }) => {
+	if (!side) return <></>;
 	const getParentWidth = () => parentRef.current?.offsetWidth;
+	const getParentHeight = () => parentRef.current?.offsetHeight;
+	const topOrBottom = side === 'top' || side === 'bottom';
 	const [icicles, setIcicles] = useState<{ height: number; width: number }[]>([]);
 
 	const createIcicles = () => {
-		const max = getParentWidth();
+		const max = topOrBottom ? getParentWidth() : getParentHeight();
+		console.log({ max });
 		let curr = 0;
 		const icicleValues: { height: number; width: number }[] = [];
 		while (true) {
@@ -61,7 +60,13 @@ const Icicles: React.FC<IciclesProps> = ({
 	}, [parentRef]);
 
 	return (
-		<div className='Wrapper' style={{ top: top }}>
+		<div
+			className='Wrapper'
+			style={{
+				...calcOffset(offset, side),
+				width: topOrBottom ? getParentWidth() : getParentHeight(),
+			}}
+		>
 			{icicles.map((icicleValues, index) => {
 				return (
 					<Icicle values={icicleValues} backgroundColor={backgroundColor} key={index} />
@@ -74,7 +79,7 @@ const Icicles: React.FC<IciclesProps> = ({
 Icicles.defaultProps = {
 	heightConstrains: { min: 30, max: 60 },
 	widthConstrains: { min: 10, max: 40 },
-	top: '100%',
+	offset: '100%',
 };
 
 export default Icicles;
