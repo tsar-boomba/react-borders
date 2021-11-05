@@ -11,5 +11,6 @@ export interface BorderSettings {
 
 export interface BorderItemSettings {
 	values: { height: number; width: number };
+	side: sides;
 	backgroundColor?: string;
 }

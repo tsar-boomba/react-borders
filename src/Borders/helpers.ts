@@ -1,6 +1,6 @@
 import { BorderSettings, sides } from './borderTypes';
 
-export const hasWhitespace = (string = '') => new RegExp('/\\s/C').test(string);
+export const hasWhitespace = (str = '') => new RegExp('/\\s/C').test(str);
 
 export const calcSide = (
 	sides: [0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined],
@@ -28,7 +28,7 @@ export const calcOffset = (offset: string | number | undefined, side: BorderSett
 		case 'top':
 			return { bottom: offset, top: 0, left: 0 };
 		case 'right':
-			return { left: offset, right: 0, bottom: 0 };
+			return { left: offset, top: 0, bottom: 0 };
 		case 'bottom':
 			return { top: offset, left: 0 };
 		case 'left':
@@ -43,14 +43,14 @@ export const calcRotation = (side: sides) => {
 		case 'top':
 			return { transform: 'rotate(180deg)' };
 		case 'right':
-			return { transform: 'rotate(270deg)' };
+			return { transform: 'rotate(360deg)' };
 		case 'bottom':
 			return { transform: 'rotate(360deg)' };
 		case 'left':
-			return { transform: 'rotate(90deg)' };
+			return { transform: 'rotate(180deg)' };
 		default:
 			throw new Error(
-				'Error calculating rotation, component may not have recieve side prop.'
+				'Error calculating border rotation, component may not have recieved side prop.'
 			);
 	}
 };
