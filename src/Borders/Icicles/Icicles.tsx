@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BorderSettings } from '../borderTypes';
-import { calcOffset } from '../helpers';
+import { calcOffset, calcRotation } from '../helpers';
 import Icicle from './Icicle';
 import './icicles.css';
 
@@ -20,7 +20,6 @@ const Icicles: React.FC<BorderSettings> = ({
 
 	const createIcicles = () => {
 		const max = topOrBottom ? getParentWidth() : getParentHeight();
-		console.log({ max });
 		let curr = 0;
 		const icicleValues: { height: number; width: number }[] = [];
 		while (true) {
@@ -64,6 +63,7 @@ const Icicles: React.FC<BorderSettings> = ({
 			className='Wrapper'
 			style={{
 				...calcOffset(offset, side),
+				...calcRotation(side),
 				width: topOrBottom ? getParentWidth() : getParentHeight(),
 			}}
 		>

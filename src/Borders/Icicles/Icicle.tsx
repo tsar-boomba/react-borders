@@ -1,9 +1,10 @@
 import React from 'react';
 import { BorderItemSettings } from '../borderTypes';
+import { hasWhitespace } from '../helpers';
 import './icicles.css';
 
 const Icicle: React.FC<BorderItemSettings> = ({ values, backgroundColor }) => {
-	const isGradient = new RegExp('/\\s/C').test(backgroundColor || '');
+	const isGradient = hasWhitespace(backgroundColor);
 
 	return (
 		<>
