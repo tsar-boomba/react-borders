@@ -1,14 +1,4 @@
-.Icicle {
-	width: 15px;
-	height: 40px;
-	border: 0;
-	clip-path: polygon(0 0, 50% 100%, 100% 0);
-	transform: rotate(360deg);
-	background: blue;
-	-webkit-transform: rotate(360deg);
-}
-
-.Wrapper {
+.react-border-border-wrapper {
 	display: flex;
 	position: absolute;
 	top: 100%;

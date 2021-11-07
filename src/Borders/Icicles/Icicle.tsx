@@ -10,16 +10,17 @@ const Icicle: React.FC<BorderItemSettings> = ({ values, backgroundColor, side })
 	return (
 		<>
 			<div
-				className='Icicle'
 				style={{
 					width: values.width,
 					height: values.height,
-					backgroundColor: isGradient
+					background: isGradient
 						? `transparent linear-gradient(${
-								isTopOrBottom ? '0deg' : '90deg'
+								isTopOrBottom ? '180deg' : '90deg'
 						  }, ${backgroundColor})`
 						: backgroundColor,
-					clipPath: isTopOrBottom ? undefined : 'polygon(100% 50%, 0 0, 0 100%)',
+					clipPath: isTopOrBottom
+						? 'polygon(0 0, 50% 100%, 100% 0)'
+						: 'polygon(100% 50%, 0 0, 0 100%)',
 				}}
 			/>
 		</>

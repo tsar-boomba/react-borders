@@ -1,6 +1,6 @@
 import { BorderSettings, sides } from './borderTypes';
 
-export const hasWhitespace = (str = '') => new RegExp('/\\s/C').test(str);
+export const hasWhitespace = (str = '') => /\s/g.test(str);
 
 export const calcSide = (
 	sides: [0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined],

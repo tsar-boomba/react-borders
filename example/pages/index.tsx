@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import { useRef } from 'react';
 import styles from '../styles/Home.module.css';
 import Box from '../components/Box';
@@ -16,7 +15,7 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Box />
+			<Box backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%' />
 		</div>
 	);
 };

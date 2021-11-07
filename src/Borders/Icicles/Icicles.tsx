@@ -36,7 +36,7 @@ const Icicles: React.FC<BorderSettings> = ({
 
 	return (
 		<div
-			className='Wrapper'
+			className='react-border-border-wrapper'
 			style={{
 				...calcOffset(offset, side),
 				...calcRotation(side),

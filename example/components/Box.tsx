@@ -21,14 +21,13 @@ const Box: React.FC<BoxProps> = ({
 	return (
 		<div
 			ref={boxRef}
-			style={
-				style || {
-					position: 'relative',
-					fontSize: 32,
-					fontWeight: 'bold',
-					backgroundColor: 'green',
-				}
-			}
+			style={{
+				position: 'relative',
+				fontSize: 32,
+				fontWeight: 'bold',
+				backgroundColor: 'green',
+				...style,
+			}}
 		>
 			Icicles
 			<Border
