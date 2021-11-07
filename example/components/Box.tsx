@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Border } from 'react-borders';
 
 interface BoxProps {
+	type: 'icicles';
 	style?: React.CSSProperties;
 	heightConstrains?: { min: number; max: number };
 	widthConstrains?: { min: number; max: number };
@@ -10,6 +11,7 @@ interface BoxProps {
 }
 
 const Box: React.FC<BoxProps> = ({
+	type,
 	style,
 	heightConstrains,
 	widthConstrains,
@@ -32,7 +34,7 @@ const Box: React.FC<BoxProps> = ({
 			Icicles
 			<Border
 				parentRef={boxRef}
-				type='icicles'
+				type={type}
 				sides={[1, 1, 1, 1]}
 				heightConstrains={heightConstrains}
 				widthConstrains={widthConstrains}

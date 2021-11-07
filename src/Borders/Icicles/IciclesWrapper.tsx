@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { BorderSettings } from '../borderTypes';
-import { generateBorder } from '../generateBorder';
-import { calcOffset, calcRotation } from '../helpers';
+import { BorderSettings } from '../../borderTypes';
+import { generateBorder } from '../../generateBorder';
+import { calcOffset, calcRotation } from '../../helpers';
 import Icicle from './Icicle';
-import './icicles.css';
+import '../../border.css';
 
 const Icicles: React.FC<BorderSettings> = ({
 	parentRef,

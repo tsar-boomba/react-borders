@@ -15,7 +15,10 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Box backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%' />
+			<Box
+				type='icicles'
+				backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%'
+			/>
 		</div>
 	);
 };

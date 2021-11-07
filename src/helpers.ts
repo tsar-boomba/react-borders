@@ -1,4 +1,5 @@
-import { BorderSettings, sides } from './borderTypes';
+import { BorderSettings, BorderTypes, Sides } from './borderTypes';
+import Icicles from './Borders/Icicles/IciclesWrapper';
 
 export const hasWhitespace = (str = '') => /\s/g.test(str);
 
@@ -38,7 +39,7 @@ export const calcOffset = (offset: string | number | undefined, side: BorderSett
 	}
 };
 
-export const calcRotation = (side: sides) => {
+export const calcRotation = (side: Sides) => {
 	switch (side) {
 		case 'top':
 			return { transform: 'rotate(180deg)' };
@@ -52,5 +53,14 @@ export const calcRotation = (side: sides) => {
 			throw new Error(
 				'Error calculating border rotation, component may not have recieved side prop.'
 			);
+	}
+};
+
+export const pickBorder = (type: BorderTypes) => {
+	switch (type) {
+		case 'icicles':
+			return Icicles;
+		default:
+			throw new Error('Border received invalid type prop.');
 	}
 };

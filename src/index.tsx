@@ -1,3 +1,3 @@
-import Border from './Borders/Border';
+import Border from './Border';
 
 export { Border };

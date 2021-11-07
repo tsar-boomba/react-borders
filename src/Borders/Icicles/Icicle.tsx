@@ -1,7 +1,6 @@
 import React from 'react';
-import { BorderItemSettings } from '../borderTypes';
-import { hasWhitespace } from '../helpers';
-import './icicles.css';
+import { BorderItemSettings } from '../../borderTypes';
+import { hasWhitespace } from '../../helpers';
 
 const Icicle: React.FC<BorderItemSettings> = ({ values, backgroundColor, side }) => {
 	const isGradient = hasWhitespace(backgroundColor);

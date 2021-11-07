@@ -1,8 +1,8 @@
-export type sides = 'top' | 'right' | 'bottom' | 'left';
+export type Sides = 'top' | 'right' | 'bottom' | 'left';
 
 export interface BorderSettings {
 	parentRef: React.MutableRefObject<any>;
-	side: sides | undefined;
+	side: Sides | undefined;
 	heightConstrains?: { min: number; max: number };
 	widthConstrains?: { min: number; max: number };
 	backgroundColor?: string;
@@ -11,6 +11,8 @@ export interface BorderSettings {
 
 export interface BorderItemSettings {
 	values: { height: number; width: number };
-	side: sides;
+	side: Sides;
 	backgroundColor?: string;
 }
+
+export type BorderTypes = 'icicles';

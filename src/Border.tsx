@@ -1,10 +1,9 @@
 import React from 'react';
-import { BorderSettings } from './borderTypes';
-import { calcSide } from './helpers';
-import Icicles from './Icicles/Icicles';
+import { BorderSettings, BorderTypes } from './borderTypes';
+import { calcSide, pickBorder } from './helpers';
 
 interface BorderProps {
-	type: 'icicles';
+	type: BorderTypes;
 	sides: [0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined];
 	// [1, 0, 0, 1] top and left
 	// [0, 1, 1, 0] right and bottom
@@ -15,10 +14,12 @@ const Border: React.FC<BorderProps & Omit<BorderSettings, 'side'>> = ({
 	sides,
 	...borderSettings
 }) => {
+	const BorderType = pickBorder(type);
+
 	return (
 		<>
 			{sides.map((_, index) => (
-				<Icicles key={index} side={calcSide(sides, index)} {...borderSettings} />
+				<BorderType key={index} side={calcSide(sides, index)} {...borderSettings} />
 			))}
 		</>
 	);
