@@ -1,5 +1,5 @@
 import { BorderSettings, BorderTypes, Sides } from './borderTypes';
-import Icicles from './Borders/Icicles/IciclesWrapper';
+import React from 'react';
 
 export const hasWhitespace = (str = '') => /\s/g.test(str);
 
@@ -56,10 +56,10 @@ export const calcRotation = (side: Sides) => {
 	}
 };
 
-export const pickBorder = (type: BorderTypes) => {
+export const pickBorder = (type: BorderTypes, types: React.FC<BorderSettings>[]) => {
 	switch (type) {
 		case 'icicles':
-			return Icicles;
+			return types[0];
 		default:
 			throw new Error('Border received invalid type prop.');
 	}

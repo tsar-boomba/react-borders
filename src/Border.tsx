@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import Icicles from './Borders/Icicles/IciclesWrapper';
 import { BorderSettings, BorderTypes } from './borderTypes';
 import { calcSide, pickBorder } from './helpers';
 
@@ -14,7 +15,8 @@ const Border: React.FC<BorderProps & Omit<BorderSettings, 'side'>> = ({
 	sides,
 	...borderSettings
 }) => {
-	const BorderType = pickBorder(type);
+	const borders = useMemo(() => [Icicles], []);
+	const BorderType = pickBorder(type, borders);
 
 	return (
 		<>
