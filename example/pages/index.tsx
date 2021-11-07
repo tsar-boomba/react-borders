@@ -1,12 +1,10 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useRef } from 'react';
 import styles from '../styles/Home.module.css';
-import Box from '../components/Box';
+import ExampleBox from '../components/ExampleBox';
 
 const Home: NextPage = () => {
-	const boxRef = useRef<HTMLDivElement>(null);
-
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -15,9 +13,9 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Box
+			<ExampleBox
 				type='icicles'
-				backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%'
+				backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 50%'
 			/>
 		</div>
 	);

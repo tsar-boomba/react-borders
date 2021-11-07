@@ -21,11 +21,11 @@ export const generateBorder = ({
 		if (curr < max) {
 			const height = Math.floor(
 				Math.random() * (heightConstrains.max - heightConstrains.min + 1) +
-					heightConstrains.min
+					heightConstrains.min,
 			);
 			const width = Math.floor(
 				Math.random() * (widthConstrains.max - widthConstrains.min + 1) +
-					widthConstrains.min
+					widthConstrains.min,
 			);
 			if (curr + width > max) {
 				const shortenedwidth = max - curr;

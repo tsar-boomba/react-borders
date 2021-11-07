@@ -1,7 +1,7 @@
 export type Sides = 'top' | 'right' | 'bottom' | 'left';
 
 export interface BorderSettings {
-	parentRef: React.MutableRefObject<any>;
+	parentRef: React.MutableRefObject<unknown>;
 	side: Sides | undefined;
 	heightConstrains?: { min: number; max: number };
 	widthConstrains?: { min: number; max: number };

@@ -5,7 +5,7 @@ export const hasWhitespace = (str = '') => /\s/g.test(str);
 
 export const calcSide = (
 	sides: [0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined],
-	index: number
+	index: number,
 ) => {
 	const currSide = sides[index];
 	switch (index) {
@@ -51,7 +51,7 @@ export const calcRotation = (side: Sides) => {
 			return { transform: 'rotate(180deg)' };
 		default:
 			throw new Error(
-				'Error calculating border rotation, component may not have recieved side prop.'
+				'Error calculating border rotation, component may not have recieved side prop.',
 			);
 	}
 };

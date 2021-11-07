@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Border } from 'react-borders';
 
-interface BoxProps {
+interface ExampleBoxProps {
 	type: 'icicles';
 	style?: React.CSSProperties;
 	heightConstrains?: { min: number; max: number };
@@ -10,7 +10,7 @@ interface BoxProps {
 	offset?: number | string;
 }
 
-const Box: React.FC<BoxProps> = ({
+const ExampleBox: React.FC<ExampleBoxProps> = ({
 	type,
 	style,
 	heightConstrains,
@@ -18,11 +18,11 @@ const Box: React.FC<BoxProps> = ({
 	backgroundColor,
 	offset,
 }) => {
-	const boxRef = useRef<HTMLDivElement>(null);
+	const ExampleBoxRef = useRef<HTMLDivElement>(null);
 
 	return (
 		<div
-			ref={boxRef}
+			ref={ExampleBoxRef}
 			style={{
 				position: 'relative',
 				fontSize: 32,
@@ -33,7 +33,7 @@ const Box: React.FC<BoxProps> = ({
 		>
 			Icicles
 			<Border
-				parentRef={boxRef}
+				parentRef={ExampleBoxRef}
 				type={type}
 				sides={[1, 1, 1, 1]}
 				heightConstrains={heightConstrains}
@@ -45,4 +45,4 @@ const Box: React.FC<BoxProps> = ({
 	);
 };
 
-export default Box;
+export default ExampleBox;

@@ -1,5 +1,6 @@
 {
 	"name": "react-borders",
+	"private": false,
 	"version": "0.1.2",
 	"description": "A React component for attaching shapes to teh edges any html element",
 	"repository": {
@@ -13,8 +14,12 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
-		"prepublishOnly": "npm run build",
-		"watch": "rollup -cw"
+		"prepublishOnly": "npm run build && pinst --disable",
+		"postpublish": "pinst --enable",
+		"watch": "rollup -cw",
+		"lint-fix": "eslint --fix",
+		"prepare": "husky install",
+		"postinstall": "husky install"
 	},
 	"author": "Isaiah Gamble (itg.2048@gmail.com)",
 	"license": "MIT",
@@ -23,8 +28,17 @@
 		"@rollup/plugin-node-resolve": "^13.0.6",
 		"@types/react": "^17.0.33",
 		"@types/react-dom": "^17.0.10",
+		"@typescript-eslint/eslint-plugin": "^5.3.0",
+		"@typescript-eslint/parser": "^5.3.0",
+		"eslint": "^7.32.0",
+		"eslint-config-next": "^12.0.3",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.4",
 		"next": "^12.0.3",
+		"pinst": "^2.1.6",
 		"postcss": "^8.3.11",
+		"prettier": "^2.4.1",
 		"react": ">=16.8.0",
 		"react-dom": ">=16.8.0",
 		"rollup": "^2.58.3",
