@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 			<ExampleBox
 				type='ellipses'
 				sides={[1, 1, 1, 1]}
-				widthConstrains={{ max: 20, min: 10 }}
+				widthConstrains={{ max: 40, min: 5 }}
 				heightConstrains={{ max: 15, min: 15 }}
 				backgroundColor='rgba(238,174,202,1) 50%, rgba(148,187,233,1) 100%'
 			/>
