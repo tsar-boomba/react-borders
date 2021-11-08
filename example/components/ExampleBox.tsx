@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Border } from 'react-borders';
 
 interface ExampleBoxProps {
-	type: 'icicles';
+	type: 'triangles';
 	style?: React.CSSProperties;
 	heightConstrains?: { min: number; max: number };
 	widthConstrains?: { min: number; max: number };

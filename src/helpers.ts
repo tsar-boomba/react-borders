@@ -58,7 +58,7 @@ export const calcRotation = (side: Sides) => {
 
 export const pickBorder = (type: BorderTypes, types: React.FC<BorderSettings>[]) => {
 	switch (type) {
-		case 'icicles':
+		case 'triangles':
 			return types[0];
 		default:
 			throw new Error('Border received invalid type prop.');

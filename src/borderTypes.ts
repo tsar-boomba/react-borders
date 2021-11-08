@@ -1,3 +1,4 @@
+export type BorderTypes = 'triangles';
 export type Sides = 'top' | 'right' | 'bottom' | 'left';
 
 export interface BorderSettings {
@@ -14,5 +15,3 @@ export interface BorderItemSettings {
 	side: Sides;
 	backgroundColor?: string;
 }
-
-export type BorderTypes = 'icicles';

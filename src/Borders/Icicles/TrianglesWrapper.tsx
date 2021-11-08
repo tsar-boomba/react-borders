@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BorderSettings } from '../../borderTypes';
 import { generateBorder } from '../../generateBorder';
 import { calcOffset, calcRotation } from '../../helpers';
-import Icicle from './Icicle';
+import Icicle from './Triangle';
 import '../../border.css';
 
 const Icicles: React.FC<BorderSettings> = ({
