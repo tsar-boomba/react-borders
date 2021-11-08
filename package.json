@@ -20,7 +20,7 @@
 		"lint-fix": "eslint --fix",
 		"prepare": "husky install",
 		"postinstall": "husky install",
-		"deploy": "npm run build && cd example && npm run build"
+		"deploy": "npm run build && cd example && npm install && npm run build"
 	},
 	"author": "Isaiah Gamble (itg.2048@gmail.com)",
 	"license": "MIT",
