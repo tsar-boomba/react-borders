@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import TrianglesWrapper from './Borders/Icicles/TrianglesWrapper';
+import TrianglesWrapper from './Borders/Triangles/TrianglesWrapper';
 import { BorderSettings } from './borderTypes';
 import { calcSide, pickBorder } from './helpers';
 
