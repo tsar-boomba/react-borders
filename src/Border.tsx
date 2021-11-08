@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
+import EllipsesWrapper from './Borders/Ellipses/EllipsesWrapper';
 import TrianglesWrapper from './Borders/Triangles/TrianglesWrapper';
 import { BorderSettings } from './borderTypes';
 import { calcSide, pickBorder } from './helpers';
 
 const Border: React.FC<BorderSettings> = ({ type, sides, ...borderSettings }) => {
-	const borders = useMemo(() => [TrianglesWrapper], []);
+	const borders = useMemo(() => [TrianglesWrapper, EllipsesWrapper], []);
 	const BorderType = pickBorder(type, borders);
 
 	return (
@@ -14,10 +15,6 @@ const Border: React.FC<BorderSettings> = ({ type, sides, ...borderSettings }) =>
 			))}
 		</>
 	);
-};
-
-Border.defaultProps = {
-	offset: '100%',
 };
 
 export default Border;

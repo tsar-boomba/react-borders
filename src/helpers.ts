@@ -60,6 +60,8 @@ export const pickBorder = (type: BorderTypes, types: React.FC<WrapperSettings>[]
 	switch (type) {
 		case 'triangles':
 			return types[0];
+		case 'ellipses':
+			return types[1];
 		default:
 			throw new Error('Border received invalid type prop.');
 	}

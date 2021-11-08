@@ -1,4 +1,4 @@
-export type BorderTypes = 'triangles';
+export type BorderTypes = 'triangles' | 'ellipses';
 export type Sides = 'top' | 'right' | 'bottom' | 'left';
 
 export interface WrapperSettings {

@@ -16,8 +16,15 @@ const Home: NextPage = () => {
 			<ExampleBox
 				type='triangles'
 				sides={[1, 1, 1, 1]}
-				spacing={5}
 				backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 50%'
+			/>
+			<span style={{ height: 100 }} />
+			<ExampleBox
+				type='ellipses'
+				sides={[1, 1, 1, 1]}
+				widthConstrains={{ max: 20, min: 10 }}
+				heightConstrains={{ max: 15, min: 15 }}
+				backgroundColor='rgba(238,174,202,1) 50%, rgba(148,187,233,1) 100%'
 			/>
 		</div>
 	);
