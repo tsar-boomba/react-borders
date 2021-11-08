@@ -1,4 +1,4 @@
-import { BorderSettings, BorderTypes, Sides } from './borderTypes';
+import { BorderTypes, Sides, WrapperSettings } from './borderTypes';
 import React from 'react';
 
 export const hasWhitespace = (str = '') => /\s/g.test(str);
@@ -22,7 +22,7 @@ export const calcSide = (
 	}
 };
 
-export const calcOffset = (offset: string | number | undefined, side: BorderSettings['side']) => {
+export const calcOffset = (offset: string | number | undefined, side: WrapperSettings['side']) => {
 	if (!offset) offset = '100%';
 
 	switch (side) {
@@ -56,7 +56,7 @@ export const calcRotation = (side: Sides) => {
 	}
 };
 
-export const pickBorder = (type: BorderTypes, types: React.FC<BorderSettings>[]) => {
+export const pickBorder = (type: BorderTypes, types: React.FC<WrapperSettings>[]) => {
 	switch (type) {
 		case 'triangles':
 			return types[0];

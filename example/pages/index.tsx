@@ -15,6 +15,8 @@ const Home: NextPage = () => {
 
 			<ExampleBox
 				type='triangles'
+				sides={[1, 1, 1, 1]}
+				spacing={5}
 				backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 50%'
 			/>
 		</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { BorderItemSettings } from '../../borderTypes';
 import { hasWhitespace } from '../../helpers';
 
-const Icicle: React.FC<BorderItemSettings> = ({ values, backgroundColor, side }) => {
+const Triangle: React.FC<BorderItemSettings> = ({ values, backgroundColor, side, spacing }) => {
 	const isGradient = hasWhitespace(backgroundColor);
 	const isTopOrBottom = side === 'top' || side === 'bottom';
 
@@ -10,8 +10,8 @@ const Icicle: React.FC<BorderItemSettings> = ({ values, backgroundColor, side })
 		<>
 			<div
 				style={{
-					width: values.width,
-					height: values.height,
+					width: isTopOrBottom ? values.width - spacing : values.width,
+					height: isTopOrBottom ? values.height : values.height - spacing,
 					background: isGradient
 						? `transparent linear-gradient(${
 								isTopOrBottom ? '180deg' : '90deg'
@@ -26,8 +26,8 @@ const Icicle: React.FC<BorderItemSettings> = ({ values, backgroundColor, side })
 	);
 };
 
-Icicle.defaultProps = {
+Triangle.defaultProps = {
 	backgroundColor: 'rgba(205, 252, 255, 1) 0%, rgba(84, 182, 229, 1) 78%',
 };
 
-export default Icicle;
+export default Triangle;

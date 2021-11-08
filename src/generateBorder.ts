@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import { BorderSettings } from './borderTypes';
+import { WrapperSettings } from './borderTypes';
 
 export const generateBorder = ({
 	parentRef,
@@ -7,7 +7,7 @@ export const generateBorder = ({
 	widthConstrains,
 	heightConstrains,
 	setState,
-}: Omit<BorderSettings, 'backgroundColor' | 'offset'> & {
+}: Omit<WrapperSettings, 'backgroundColor' | 'offset'> & {
 	setState: Dispatch<SetStateAction<{ height: number; width: number }[]>>;
 }) => {
 	const topOrBottom = side === 'top' || side === 'bottom';

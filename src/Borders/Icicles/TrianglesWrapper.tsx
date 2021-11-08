@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { BorderSettings } from '../../borderTypes';
+import { WrapperSettings } from '../../borderTypes';
 import { generateBorder } from '../../generateBorder';
 import { calcOffset, calcRotation } from '../../helpers';
-import Icicle from './Triangle';
+import Triangle from './Triangle';
 import '../../border.css';
 
-const Icicles: React.FC<BorderSettings> = ({
+const TrianglesWrapper: React.FC<WrapperSettings> = ({
 	parentRef,
 	heightConstrains,
 	widthConstrains,
 	backgroundColor,
 	side,
 	offset,
+	spacing,
 }) => {
 	if (!side) return <></>;
 	const topOrBottom = side === 'top' || side === 'bottom';
@@ -47,10 +48,11 @@ const Icicles: React.FC<BorderSettings> = ({
 		>
 			{icicles.map((icicleValues, index) => {
 				return (
-					<Icicle
+					<Triangle
 						values={icicleValues}
 						backgroundColor={backgroundColor}
 						side={side}
+						spacing={spacing || 0}
 						key={index}
 					/>
 				);
@@ -59,10 +61,10 @@ const Icicles: React.FC<BorderSettings> = ({
 	);
 };
 
-Icicles.defaultProps = {
+TrianglesWrapper.defaultProps = {
 	heightConstrains: { min: 30, max: 60 },
 	widthConstrains: { min: 10, max: 40 },
-	offset: '100%',
+	spacing: 0,
 };
 
-export default Icicles;
+export default TrianglesWrapper;

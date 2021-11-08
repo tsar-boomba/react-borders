@@ -1,21 +1,10 @@
 import React, { useMemo } from 'react';
-import Icicles from './Borders/Icicles/TrianglesWrapper';
-import { BorderSettings, BorderTypes } from './borderTypes';
+import TrianglesWrapper from './Borders/Icicles/TrianglesWrapper';
+import { BorderSettings } from './borderTypes';
 import { calcSide, pickBorder } from './helpers';
 
-interface BorderProps {
-	type: BorderTypes;
-	sides: [0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined];
-	// [1, 0, 0, 1] top and left
-	// [0, 1, 1, 0] right and bottom
-}
-
-const Border: React.FC<BorderProps & Omit<BorderSettings, 'side'>> = ({
-	type,
-	sides,
-	...borderSettings
-}) => {
-	const borders = useMemo(() => [Icicles], []);
+const Border: React.FC<BorderSettings> = ({ type, sides, ...borderSettings }) => {
+	const borders = useMemo(() => [TrianglesWrapper], []);
 	const BorderType = pickBorder(type, borders);
 
 	return (
@@ -25,6 +14,10 @@ const Border: React.FC<BorderProps & Omit<BorderSettings, 'side'>> = ({
 			))}
 		</>
 	);
+};
+
+Border.defaultProps = {
+	offset: '100%',
 };
 
 export default Border;

@@ -1,22 +1,15 @@
 import React, { useRef } from 'react';
-import { Border } from 'react-borders';
+import { Border, BorderSettings } from 'react-borders';
 
-interface ExampleBoxProps {
-	type: 'triangles';
-	style?: React.CSSProperties;
-	heightConstrains?: { min: number; max: number };
-	widthConstrains?: { min: number; max: number };
-	backgroundColor?: string;
-	offset?: number | string;
-}
-
-const ExampleBox: React.FC<ExampleBoxProps> = ({
+const ExampleBox: React.FC<Omit<BorderSettings, 'parentRef'> & { style?: React.CSSProperties }> = ({
 	type,
 	style,
 	heightConstrains,
 	widthConstrains,
 	backgroundColor,
 	offset,
+	spacing,
+	sides,
 }) => {
 	const ExampleBoxRef = useRef<HTMLDivElement>(null);
 
@@ -35,11 +28,12 @@ const ExampleBox: React.FC<ExampleBoxProps> = ({
 			<Border
 				parentRef={ExampleBoxRef}
 				type={type}
-				sides={[1, 1, 1, 1]}
+				sides={sides}
 				heightConstrains={heightConstrains}
 				widthConstrains={widthConstrains}
 				backgroundColor={backgroundColor}
 				offset={offset}
+				spacing={spacing}
 			/>
 		</div>
 	);
