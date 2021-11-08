@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import { Border, BorderSettings } from 'react-borders';
 
-const ExampleBox: React.FC<Omit<BorderSettings, 'parentRef'> & { style?: React.CSSProperties }> = ({
+const ExampleBox: React.FC<
+	Omit<BorderSettings, 'parentRef'> & { style?: React.CSSProperties; text?: string }
+> = ({
 	type,
 	style,
 	heightConstrains,
@@ -10,6 +12,7 @@ const ExampleBox: React.FC<Omit<BorderSettings, 'parentRef'> & { style?: React.C
 	offset,
 	spacing,
 	sides,
+	text,
 }) => {
 	const ExampleBoxRef = useRef<HTMLDivElement>(null);
 
@@ -24,7 +27,7 @@ const ExampleBox: React.FC<Omit<BorderSettings, 'parentRef'> & { style?: React.C
 				...style,
 			}}
 		>
-			Icicles
+			{text || 'Icicles'}
 			<Border
 				parentRef={ExampleBoxRef}
 				type={type}
