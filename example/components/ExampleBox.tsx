@@ -27,7 +27,7 @@ const ExampleBox: React.FC<
 				...style,
 			}}
 		>
-			{text || 'Icicles'}
+			{text || 'Triangles'}
 			<Border
 				parentRef={ExampleBoxRef}
 				type={type}
