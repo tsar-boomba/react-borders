@@ -14,11 +14,11 @@ const ExampleBox: React.FC<
 	sides,
 	text,
 }) => {
-	const ExampleBoxRef = useRef<HTMLDivElement>(null);
+	const exmapleBoxRef = useRef<HTMLDivElement>(null);
 
 	return (
 		<div
-			ref={ExampleBoxRef}
+			ref={exmapleBoxRef}
 			style={{
 				position: 'relative',
 				fontSize: 32,
@@ -29,7 +29,7 @@ const ExampleBox: React.FC<
 		>
 			{text || 'Triangles'}
 			<Border
-				parentRef={ExampleBoxRef}
+				parentRef={exmapleBoxRef}
 				type={type}
 				sides={sides}
 				heightConstrains={heightConstrains}
