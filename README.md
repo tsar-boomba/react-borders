@@ -26,7 +26,7 @@ const BorderBox: React.VFC = () => {
 
 ## Example
 
-The exmaple site is deployed [to vercel here](https://react-borders.vercel.app/). It is not uet complete.
+The exmaple site is deployed [to vercel here](https://react-borders.vercel.app/). It is not yet complete.
 
 ## Border
 
