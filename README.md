@@ -24,17 +24,15 @@ const BorderBox: React.VFC = () => {
 }
 ```
 
-## Exports
-
-### Border
+## Border
 
 This is a function component used attach and customize borders.
 
-#### Usage
+### Usage
 
 For usage of this component, reference the basic usage section of the README.
 
-#### Props
+### Props
 
 The prop types for the Border component are exported from the package, if you want to use them.
 
@@ -42,21 +40,21 @@ The prop types for the Border component are exported from the package, if you wa
 import { BorderSettings } from 'react-borders';
 ```
 
-##### parentRef
+#### parentRef
 
 Type: `React.MutableRefObject<any>`
 Required: true
 
 The ref passed to the Border component should contain a reference to the element you wish to attach a border to.
 
-##### type
+#### type
 
 Type: `'triangles' | 'ellipses'`
 Required: true
 
 The type of border you would like the component to display.
 
-##### sides
+#### sides
 
 Type: `[0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined, 0 | 1 | undefined]`
 Required: false
@@ -66,14 +64,14 @@ Each position in the array correlates to a side of the element being populated w
 
 Example: [1, 0, 1, 0] would place a border on only the top and bottom
 
-##### widthContrains & heightConstrains
+#### widthContrains & heightConstrains
 
 Type: `{ max: number, min: number }`
 Required: false
 
 Sets the max height and width for each element in the border.
 
-##### backgroundColor
+#### backgroundColor
 
 Type: string
 Required: false
@@ -91,20 +89,20 @@ You can even set the background to a linear gradient. All you have to do is pass
 />
 ```
 
-##### offset
+#### offset
 
 Type: string | number
 required: false
 
 This prop is used to decide how far the border should be from the element, 100% means it is on the element border, lower makes it closer, while higher does the opposite.
 
-##### spacing
+#### spacing
 
 Type: number
 required: false
 
 How far apart each element in the border should be from each other.
 
-### BorderSettings
+## BorderSettings
 
 A interface that defines all of the props listed above, for your convenience.
