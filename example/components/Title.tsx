@@ -10,12 +10,19 @@ const Title: React.VFC<{ text: string }> = ({ text }) => {
 			ref={titleRef}
 			style={{
 				position: 'relative',
-				fontSize: '4rem',
+				fontSize: '7vw',
 				marginBottom: '8rem',
 			}}
 		>
 			{text}
-			<Border parentRef={titleRef} type='triangles' sides={[0, 0, 1, 0]} offset='85%' />
+			<Border
+				parentRef={titleRef}
+				type='triangles'
+				sides={[0, 0, 1, 0]}
+				offset='85%'
+				heightConstrains={{ max: 100, min: 40 }}
+				widthConstrains={{ max: 30, min: 10 }}
+			/>
 			<span
 				style={{
 					position: 'absolute',

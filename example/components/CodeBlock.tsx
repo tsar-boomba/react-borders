@@ -15,8 +15,9 @@ const CodeBlock: React.VFC<CodeBlockProps> = ({ code, language, style }) => {
 				text={code}
 				theme={monokai}
 				language={language || 'tsx'}
-				customStyle={{ ...style }}
-			></CopyBlock>
+				customStyle={{ overflowX: 'auto', ...style }}
+				wrapLongLines={false}
+			/>
 			<div
 				style={{
 					position: 'absolute',
