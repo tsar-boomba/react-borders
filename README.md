@@ -24,6 +24,10 @@ const BorderBox: React.VFC = () => {
 };
 ```
 
+## Example
+
+The exmaple site is deployed (to vercel here)[https://react-borders.vercel.app/]. It is not uet complete.
+
 ## Border
 
 This is a function component used attach and customize borders.
