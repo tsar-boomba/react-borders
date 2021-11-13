@@ -5,7 +5,7 @@ import { calcOffset, calcRotation } from '../../helpers';
 import Triangle from './Triangle';
 import '../../border.css';
 
-const TrianglesWrapper: React.FC<WrapperSettings> = ({
+const TrianglesWrapper: React.VFC<WrapperSettings> = ({
 	parentRef,
 	heightConstrains,
 	widthConstrains,

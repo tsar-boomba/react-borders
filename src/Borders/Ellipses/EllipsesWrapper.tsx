@@ -5,7 +5,7 @@ import { calcOffset, calcRotation } from '../../helpers';
 import Ellipse from './Ellipse';
 import '../../border.css';
 
-const EllipsesWrapper: React.FC<WrapperSettings> = ({
+const EllipsesWrapper: React.VFC<WrapperSettings> = ({
 	parentRef,
 	heightConstrains,
 	widthConstrains,

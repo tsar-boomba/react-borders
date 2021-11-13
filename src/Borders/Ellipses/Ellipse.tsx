@@ -2,7 +2,7 @@ import React from 'react';
 import { BorderItemSettings } from '../../borderTypes';
 import { hasWhitespace } from '../../helpers';
 
-const Ellipse: React.FC<BorderItemSettings> = ({ values, backgroundColor, side, spacing }) => {
+const Ellipse: React.VFC<BorderItemSettings> = ({ values, backgroundColor, side, spacing }) => {
 	const isGradient = hasWhitespace(backgroundColor);
 	const topOrBottom = side === 'top' || side === 'bottom';
 
