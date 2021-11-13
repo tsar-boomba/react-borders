@@ -10,7 +10,7 @@ The below code will generate a box with triangles on all sides.
 
 ```tsx
 import React, { useRef } from 'react';
-import { Border } from 'react-borders-;
+import { Border } from 'react-borders';
 
 const BorderBox: React.VFC = () => {
 	const boxRef = useRef<HTMLDivElement>(null);
@@ -21,7 +21,7 @@ const BorderBox: React.VFC = () => {
 			<Border parentRef={boxRef} type='triangles' sides={[1, 1, 1, 1]} />
 		</div>
 	);
-}
+};
 ```
 
 ## Border
@@ -81,12 +81,14 @@ Sets the color of the border elements. Anything CSS supports, this does as well.
 You can even set the background to a linear gradient. All you have to do is pass the colors and when they stop, as you can see in the example below.
 
 ```tsx
-<Border
-	parentRef={ref}
-	type='triangles'
-	sides={[1, 1, 1, 1]}
-	backgroundColor='red 60%, green 20%, blue 20%'
-/>
+const Component = () => (
+	<Border
+		parentRef={ref}
+		type='triangles'
+		sides={[1, 1, 1, 1]}
+		backgroundColor='red 60%, green 20%, blue 20%'
+	/>
+);
 ```
 
 #### offset
