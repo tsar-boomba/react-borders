@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import ExampleBox from '../components/ExampleBox';
 import Title from '../components/Title';
 import CodeBlock from '../components/CodeBlock';
-import { example1, props } from '../examples';
+import { example1 } from '../examples';
 import ExampleContainer from '../components/ExampleContainer';
 import { colors } from '../styles/colors';
 
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
 				</ExampleContainer>
 				<ExampleContainer backgroundColor={colors.blue3}>
 					<h1>type</h1>
-					<h2>Type: 'triangles' | 'ellispes'</h2>
+					<h2>Type: &apos;triangles&apos; | &apos;ellispes&apos;</h2>
 					<h2>Required: true</h2>
 
 					<p {...exampleText}>
