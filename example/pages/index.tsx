@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import ExampleBox from '../components/ExampleBox';
 import Title from '../components/Title';
 import CodeBlock from '../components/CodeBlock';
-import { example1 } from './examples';
+import { example1 } from '../examples';
 import ExampleContainer from '../components/ExampleContainer';
 
 const Home: NextPage = () => {
