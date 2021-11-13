@@ -12,6 +12,7 @@
 		"next": "../node_modules/next",
 		"react": "../node_modules/react",
 		"react-borders": "../",
+		"react-code-blocks": "*",
 		"react-dom": "../node_modules/react-dom"
 	},
 	"devDependencies": {

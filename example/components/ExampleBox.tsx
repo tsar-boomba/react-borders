@@ -24,6 +24,9 @@ const ExampleBox: React.FC<
 				fontSize: 32,
 				fontWeight: 'bold',
 				backgroundColor: 'green',
+				textAlign: 'center',
+				marginTop: (heightConstrains?.max || 48) + 16,
+				width: 200,
 				...style,
 			}}
 		>

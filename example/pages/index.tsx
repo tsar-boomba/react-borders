@@ -3,6 +3,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import ExampleBox from '../components/ExampleBox';
+import Title from '../components/Title';
+import CodeBlock from '../components/CodeBlock';
+import { example1 } from './examples';
+import ExampleContainer from '../components/ExampleContainer';
 
 const Home: NextPage = () => {
 	return (
@@ -13,20 +17,16 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<ExampleBox
-				type='triangles'
-				sides={[1, 1, 1, 1]}
-				backgroundColor='rgba(238,174,202,1) 0%, rgba(148,187,233,1) 50%'
-			/>
-			<span style={{ height: 100 }} />
-			<ExampleBox
-				type='ellipses'
-				text='Ellipses'
-				sides={[1, 1, 1, 1]}
-				widthConstrains={{ max: 50, min: 5 }}
-				heightConstrains={{ max: 15, min: 15 }}
-				backgroundColor='rgba(238,174,202,1) 50%, rgba(148,187,233,1) 100%'
-			/>
+			<Title text='React Borders' />
+
+			<main className={styles.main}>
+				<ExampleContainer>
+					<h1>Basic Usage</h1>
+					<ExampleBox type='triangles' sides={[1, 1, 1, 1]} />
+
+					<CodeBlock code={example1} />
+				</ExampleContainer>
+			</main>
 		</div>
 	);
 };
