@@ -6,9 +6,11 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	background-color: orangered;
+	z-index: -999;
 }
 
-.main {
+.section {
 	display: flex;
 	flex-flow: row wrap;
 	padding: 1rem;

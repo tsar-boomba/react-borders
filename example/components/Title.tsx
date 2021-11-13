@@ -12,6 +12,7 @@ const Title: React.VFC<{ text: string }> = ({ text }) => {
 				position: 'relative',
 				fontSize: '7vw',
 				marginBottom: '8rem',
+				zIndex: 1,
 			}}
 		>
 			{text}

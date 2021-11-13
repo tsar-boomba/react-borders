@@ -1,14 +1,37 @@
-export const example1 = `import React, { useRef } from 'react';
+const defaultExample = (code: string, text = 'Triangles') => {
+	return `import React, { useRef } from 'react';
 import { Border } from 'react-borders';
 
-const BorderBox = () => {
+const Component = () => {
 	const boxRef = useRef<HTMLDivElement>(null);
 
 	return (
 		<div ref={boxRef}>
-			'Triangles'
-			<Border type='triangles' parentRef={boxRef} sides={[1, 1, 1, 1]} />
+			'${text}'
+			${code}
 		</div>
 	);
 }
 `;
+};
+
+export const example1 = defaultExample(
+	`<Border
+				type='triangles'
+				parentRef={boxRef}
+				sides={[1, 1, 1, 1]}
+			/>`,
+);
+
+export const props = {
+	backgroundColor: defaultExample(
+		`<Border
+				type='ellipses'
+				parentRef={boxRef}
+				sides={[1, 1, 0, 1]}
+				backgroundColor='#ffffff'
+			/>
+		`,
+		'ellipses',
+	),
+};
