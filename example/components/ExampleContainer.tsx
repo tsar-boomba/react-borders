@@ -1,4 +1,5 @@
 import React from 'react';
+import { colors } from '../styles/colors';
 
 const ExampleContainer: React.FC<{ backgroundColor?: string }> = ({
 	children,
@@ -10,9 +11,9 @@ const ExampleContainer: React.FC<{ backgroundColor?: string }> = ({
 				display: 'flex',
 				flexFlow: 'column',
 				alignItems: 'center',
-				backgroundColor: backgroundColor || 'lightcoral',
+				backgroundColor: backgroundColor || 'aqua',
 				borderRadius: 16,
-				boxShadow: '',
+				boxShadow: colors.shadow1,
 				padding: 16,
 				margin: 32,
 			}}
