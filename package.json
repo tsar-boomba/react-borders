@@ -1,8 +1,8 @@
 {
 	"name": "react-borders",
 	"private": false,
-	"version": "1.0.0",
-	"description": "A React component for attaching shapes to teh edges any html element",
+	"version": "1.0.1",
+	"description": "A React component for attaching shapes to the edges any html element",
 	"repository": {
 		"url": "https://github.com/tsar-boomba/react-borders"
 	},
