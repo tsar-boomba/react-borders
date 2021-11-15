@@ -6,5 +6,5 @@ export const colors = {
 	blue3: '#94ffff',
 	blue4: '#1294ff',
 	blue5: '#3912ff',
-	shadow1: '0px 0px 16px 16px rgba(0, 0, 0, 0.25)',
+	shadow1: '0px 0px 16px 8px rgba(0, 0, 0, 0.25)',
 };
